@@ -33,8 +33,16 @@ dependencies:
   flutter_cache_manager: ^3.4.1
   # TODO(OutdatedGuy): Remove after v6.0.0 migration period
   get_storage: ^2.1.1
-  shared_preferences: ^2.5.3
-  video_player: ^2.10.0
+  shared_preferences:
+    git:
+      url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
+      path: "packages/shared_preferences/shared_preferences"
+      ref: "br_shared_preferences-v2.3.2_ohos"
+  video_player:
+    git:
+      url: "https://gitcode.com/houtian87/flutter_packages.git"
+      path: "packages/video_player/video_player"
+      ref: "br_video_player-v2.10.0_ohos"
 
 dev_dependencies:
   flutter_lints: ^6.0.0
