@@ -31,8 +31,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_cache_manager: ^3.4.1
-  # TODO(OutdatedGuy): Remove after v6.0.0 migration period
   get_storage: ^2.1.1
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+dependency_overrides:
   shared_preferences:
     git:
       url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
@@ -43,9 +47,6 @@ dependencies:
       url: "https://gitcode.com/houtian87/flutter_packages.git"
       path: "packages/video_player/video_player"
       ref: "br_video_player-v2.10.0_ohos"
-
-dev_dependencies:
-  flutter_lints: ^5.0.0
 
 platforms:
   android:
