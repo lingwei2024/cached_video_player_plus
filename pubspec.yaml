@@ -42,6 +42,11 @@ dependency_overrides:
       url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
       path: "packages/shared_preferences/shared_preferences"
       ref: "br_shared_preferences-v2.5.3_ohos"
+  path_provider:
+    git:
+      url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
+      path: "packages/path_provider/path_provider"
+      ref: "br_path_provider-v2.1.5_ohos"
   video_player:
     git:
       url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
@@ -55,7 +60,7 @@ platforms:
   macos:
   web:
   linux:
-  windows:
+  ohos:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
