@@ -7,6 +7,8 @@ import 'package:video_player/video_player.dart';
 import 'cache_key_helpers.dart';
 import 'video_cache_manager.dart';
 import 'video_player_storage.dart';
+import 'package:video_player_platform_interface/video_player_platform_interface.dart';
+
 
 /// A video player that wraps [VideoPlayerController] with intelligent
 /// caching capabilities using [flutter_cache_manager].
@@ -338,7 +340,6 @@ class CachedVideoPlayerPlus {
           package: package,
           closedCaptionFile: closedCaptionFile,
           videoPlayerOptions: videoPlayerOptions,
-          viewType: viewType,
         ),
       DataSourceType.network when !isCacheAvailable =>
         VideoPlayerController.networkUrl(
@@ -347,20 +348,17 @@ class CachedVideoPlayerPlus {
           closedCaptionFile: closedCaptionFile,
           videoPlayerOptions: videoPlayerOptions,
           httpHeaders: httpHeaders,
-          viewType: viewType,
         ),
       DataSourceType.contentUri => VideoPlayerController.contentUri(
           Uri.parse(realDataSource),
           closedCaptionFile: closedCaptionFile,
           videoPlayerOptions: videoPlayerOptions,
-          viewType: viewType,
         ),
       _ => VideoPlayerController.file(
           File(realDataSource),
           closedCaptionFile: closedCaptionFile,
           videoPlayerOptions: videoPlayerOptions,
           httpHeaders: httpHeaders,
-          viewType: viewType,
         ),
     };
 
